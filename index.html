@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Snake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <div class="ui-panel">
+            <h1>NEON SNAKE</h1>
+            <div class="score-board">
+                <div class="score-item">SCORE: <span id="score">0</span></div>
+                <div class="score-item">HIGH SCORE: <span id="high-score">0</span></div>
+            </div>
+            <p class="instructions">Use ARROW KEYS or SWIPE to move</p>
+            <button id="start-btn">START GAME</button>
+        </div>
+        <canvas id="gameCanvas" width="600" height="600"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
