@@ -195,6 +195,9 @@ function draw() {
     // Clear Canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    // Draw Grid
+    drawGrid();
+
     // Draw Walls
     ctx.fillStyle = '#00ccff';
     ctx.shadowBlur = 10;
@@ -314,6 +317,25 @@ function handleSwipe(startX, startY, endX, endY) {
         } else if (diffY < 0 && velocity.y !== 1) {
             nextVelocity = { x: 0, y: -1 }; // Up
         }
+    }
+}
+
+function drawGrid() {
+    ctx.strokeStyle = '#1a1a1a'; // Match --grid-color from CSS
+    ctx.lineWidth = 1;
+
+    for (let x = 0; x <= canvas.width; x += GRID_SIZE) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();
+    }
+
+    for (let y = 0; y <= canvas.height; y += GRID_SIZE) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
     }
 }
 

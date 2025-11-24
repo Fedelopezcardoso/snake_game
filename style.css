@@ -69,11 +69,6 @@ canvas {
     background-color: var(--bg-color);
     border: 2px solid #333;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    background-image:
-        linear-gradient(var(--grid-color) 1px, transparent 1px),
-        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
-    background-size: 20px 20px;
-    /* Matches grid size in JS */
 }
 
 button {
